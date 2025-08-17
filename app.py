@@ -11,8 +11,6 @@ import json
 import os
 import threading
 import shutil
-
-
 import matplotlib
 matplotlib.use('WXAgg')
 import matplotlib.pyplot as plt
