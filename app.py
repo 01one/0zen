@@ -12,7 +12,7 @@ import os
 import threading
 import shutil
 
-# --- Charting & Document Libraries ---
+
 import matplotlib
 matplotlib.use('WXAgg')
 import matplotlib.pyplot as plt
@@ -24,6 +24,10 @@ from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Image as Re
 from reportlab.lib import colors
 from reportlab.lib.units import inch
 from reportlab.lib.styles import getSampleStyleSheet
+
+
+
+
 
 class LoadingOverlay(wx.Panel):
 	"""A semi-transparent overlay panel with a loading spinner and text."""
@@ -52,6 +56,11 @@ class LoadingOverlay(wx.Panel):
 	def Hide(self):
 		self.spinner.Stop()
 		super().Hide()
+
+
+
+
+
 
 class MainFrame(wx.Frame):
 	def __init__(self):
