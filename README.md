@@ -20,12 +20,19 @@ This tool is for business analysts, managers, students, and anyone who needs to 
 - Python 3.7+
 - [Gemini API Key](https://ai.google.dev/gemini-api/docs/api-key).
 
+
 ### 2. Installation
 Open your terminal and run the following command to install the required libraries:
 ```bash
 pip install wxPython openpyxl pandas google-generativeai matplotlib seaborn python-docx reportlab
 
 ```
+
+
+
+## Demo Video
+
+[![Watch the demo](https://img.youtube.com/vi/9qWsmuM5bsQ/0.jpg)](https://youtu.be/9qWsmuM5bsQ)
 
 You can also download the installable build for windows
 https://mahid.itch.io/0zen
