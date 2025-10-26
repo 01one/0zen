@@ -32,7 +32,7 @@ pip install wxPython openpyxl pandas google-generativeai matplotlib seaborn pyth
 
 ## Demo Video
 
-[![Watch the demo](https://img.youtube.com/vi/9qWsmuM5bsQ/0.jpg)](https://youtu.be/9qWsmuM5bsQ)
+[![Watch the demo](https://img.youtube.com/vi/16MgNmYpP7g/0.jpg)](https://www.youtube.com/watch?v=16MgNmYpP7g)
 
 You can also download the installable build for windows
 https://mahid.itch.io/0zen
