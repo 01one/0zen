@@ -1,4 +1,4 @@
-> [!IMPORTANT]
+> [!WARNING]
 > A computer must never make a management decision.
 
 
