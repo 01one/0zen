@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # pip install wxPython openpyxl pandas google-generativeai matplotlib seaborn python-docx reportlab
 
 import wx
