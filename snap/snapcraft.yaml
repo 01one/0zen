@@ -1,0 +1,67 @@
+name: 0zen
+summary: AI-powered Excel data analyzer and report generator
+description: |
+  0zen is a desktop application that uses Google's Gemini AI to analyze Excel datasets
+  and automatically generate professional business reports containing text, tables,
+  and charts.
+
+  Features:
+  - Load XLSX/XLS files easily
+  - AI-powered analysis using Gemini
+  - Automated chart generation (matplotlib)
+  - Export reports to DOCX or PDF
+  - Custom or predefined prompt templates
+
+version: '1.0.0'
+base: core22
+confinement: strict
+grade: stable
+adopt-info: 0zen
+license: MIT
+
+parts:
+  0zen:
+    plugin: python
+    source: .
+    python-packages:
+      - wxPython
+      - openpyxl
+      - pandas
+      - google-generativeai
+      - matplotlib
+      - seaborn
+      - python-docx
+      - reportlab
+    stage-packages:
+      - python3-gi
+    override-build: |
+      snapcraftctl build
+
+      mkdir -p $SNAPCRAFT_PART_INSTALL/bin
+      mkdir -p $SNAPCRAFT_PART_INSTALL/assets
+      mkdir -p $SNAPCRAFT_PART_INSTALL/meta/gui
+
+      mv 0zen.py $SNAPCRAFT_PART_INSTALL/bin/0zen
+      chmod +x $SNAPCRAFT_PART_INSTALL/bin/0zen
+
+      cp logo.png $SNAPCRAFT_PART_INSTALL/assets/logo.png
+      cp snap/gui/0zen.desktop $SNAPCRAFT_PART_INSTALL/meta/gui/0zen.desktop
+      cp snap/gui/0zen-icon.png $SNAPCRAFT_PART_INSTALL/meta/gui/0zen-icon.png
+
+apps:
+  0zen:
+    command: bin/0zen
+    extensions: [gnome]
+    environment:
+      GTK_IM_MODULE: none
+      PYTHONPATH: $SNAP/usr/lib/python3/dist-packages
+      LD_LIBRARY_PATH: $SNAP/usr/lib:$SNAP/usr/lib/x86_64-linux-gnu
+      MPLCONFIGDIR: $SNAP_USER_COMMON/matplotlib
+    plugs:
+      - network
+      - home
+      - desktop
+      - x11
+      - wayland
+      - network-bind
+    desktop: meta/gui/0zen.desktop
