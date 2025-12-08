@@ -3,10 +3,8 @@ Name=0zen
 GenericName=AI Excel Report Generator
 Comment=AI-powered Excel data analyzer and report generator using Gemini
 Exec=0zen
-Icon=0zen-icon
+Icon=${SNAP}/meta/gui/0zen-icon.png
 Terminal=false
 Type=Application
 Categories=Office;Utility;DataVisualization;
 StartupNotify=true
-
-
