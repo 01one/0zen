@@ -1,8 +1,3 @@
-> [!WARNING]
-> A computer must never make a management decision.
-
-
-
 # 0zen - AI Excel Report Generator
 
 Its a desktop application that uses Google's Gemini AI to automatically analyze Excel data and generate professional reports with text, tables, and charts.
